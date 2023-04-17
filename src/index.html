@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<!--Code by Divinector (www.divinectorweb.com)-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Demo-App</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src = "https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0/FileSaver.min.js" integrity="sha512-csNcFYJniKjJxRWRV1R7fvnXrycHP6qDR21mgz1ZP55xY5d+aHLfo9/FcGDQLfn2IfngbAHd8LdfsagcCqgTcQ==" crossorigin = "anonymous" referrerpolicy = "no-referrer"> </script>
+    <link rel="stylesheet" href="styles.css">    
+</head>
+<body>
+  <header>
+   
+    <div class="wrapper">
+      <div class="logo">
+          <img src="C:\Users\Admin\OneDrive\Desktop\form Templete" alt="">
+      </div>
+  <ul class="nav-area">
+  <li><a href="#">Home</a></li>
+  <li><a href="#">About</a></li>
+  <li><a href="#">Services</a></li>
+  <li><a href="#">Portfolio</a></li>
+  <li><a href="#">Contact</a></li>
+  </ul>
+  </div>
+  <div class="welcome-text">
+      <h1>
+  <i>I'm looking for..</i></h1>
+  <input class="searchbar" type="text" placeholder="Enter the Job description" name="search">
+  <button type="submit"><i class="fa fa-search"></i>Search</button>
+  <a href="#" onclick="openForm()" >Register</a>
+  </div>
+  <div class="form-popup" id="myForm">
+    <!--<form action="/action_page.php" class="form-container">
+      <h1>Login</h1>
+  
+      <label for="email"><b>Email</b></label>
+      <input type="text" placeholder="Enter Email" name="email" required>
+  
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+  
+      <button type="submit" class="btn">Login</button>
+      <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+    </form>-->
+    <!-- Container Start -->
+  <div id="container">
+    <!-- Form Wrap Start -->
+    <div class="form-wrap">
+      <div style="height: 0px;">
+        <img src="profile.png" alt="Girl in a jacket" style="width:100px;height:100px;">
+      </div>
+      <!--<h1>Sign Up</h1>
+      <p>It's Free and Only takes a minute</p>
+		Form Start -->
+      <form style="padding-left: 28%;">
+        <div>
+        <div class="form-group">
+          <input class="input-fields-section50" placeholder="First Name" style="margin-right: 30px;" type="text" name="firstname" id="first-name">
+        </div>
+        <div class="form-group">
+          <input class="input-fields-section50" placeholder="Last Name"  type="text" name="lastname" id="last-name">
+        </div>
+        <div class="form-group">
+          <input class="input-fields" placeholder="(541) 754-3010" type="Number" name="phone-number" id="phone-no">
+        </div>
+		<div style="margin-top: 14px;">
+			<label class="float-class" style="margin-right: 17px;" >Age</label>
+			<div class="slidecontainer">
+			  <input name="age" type="range" min="20" max="60"value="20" class="slider float-class" id="age">
+			  <span id="demo"></span>
+			</div>
+		</div>
+        <div class="form-group">
+			<select class="input-fields"  name="State" id="State">
+			  
+			  <option value="Panjab">Panjab</option>
+			  <option value="Maharashtra">Maharashtra</option>
+			  <option value="Kerala" >Kerala</option>
+        <option value="State" selected>State</option>
+			</select>
+        </div>
+		<div class="form-group">
+			<select class="input-fields"  name="Country" id="Country">
+			  
+			  <option value="India">India</option>
+			  <option value="USA" >USA</option>
+			  <option value="Japan" >Japan</option>
+        <option value="Country" selected>Country</option>
+			</select>
+        </div>
+		<div class="form-group">
+          <input class="input-fields" placeholder="Address"  type="text" name="address" id="address">
+        </div>
+		<div class="form-group">
+          <input class="input-fields" placeholder="tags"  type="text" name="tags" id="tags">
+        </div>
+		<br>
+        <input type="checkbox" id="vehicle1" name="vehicle1" value="checkbox">
+		<label for="vehicle1"> subscribe to newsletter</label>
+    <p id="jsontext"></p>
+		<div >
+			<button class="button-Section" style="margin-right: 30%;" onclick="closeForm()" type="submit">Cancel</button>
+			<button type="submit" class="button-Section" style= "background-color: #0c9ddd;color: #fff;"  id="submit">Submit</button>
+		</div>
+
+    </div>
+      </form>
+      <!-- Form Close -->
+    </div>
+	
+    <!-- Form Wrap Close -->
+	<script>
+	var slider = document.getElementById("age");
+	var output = document.getElementById("demo");
+	output.innerHTML = slider.value;
+
+	slider.oninput = function() {
+	  output.innerHTML = this.value;
+	}
+	</script>
+  </div>
+  
+  <script>
+    function openForm() {
+      document.getElementById("myForm").style.display = "block";
+    }
+    
+    function closeForm() {
+      document.getElementById("myForm").style.display = "none";
+    }
+
+    var form = document.querySelector("form");
+    form.addEventListener("submit",(e)=>{
+      e.preventDefault();
+         const fd = new FormData(form);
+         const obj = Object.fromEntries(fd);
+
+         const json = JSON.stringify(obj);
+         localStorage.setItem('form',json);
+        console.log(json);
+
+    });
+
+
+    </script>
+  
+  
+    </header>
+  <div>
+    <div class="second-section">
+    <h3>We'er leaders in</h3>
+    <h2>Creative Digital Recruitment</h2>
+    <div><br></div>
+    <h6>Based in Surry Hills, the creative hub of Sydney we are surrounded by creative<br>
+            and that reflects on the type of jobs we recruit for.
+    </h6>
+    <button type="submit" class="button-Section" style="background-color: #0c9ddd;color: #fff;" id="submit">Submit</button>
+    <a href="#">FIND OUT MORE ABOUT US!</a>
+    </div>
+  </div>
+</body>
+</html>
+

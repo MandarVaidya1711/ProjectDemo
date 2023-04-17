@@ -1,0 +1,274 @@
+/* You can add global styles to this file, and also import other style files */
+* {
+	margin: 0;
+	padding: 0;
+}
+body {
+	font-family: 'Poppins', sans-serif;
+}
+.wrapper {
+	width: 1170px;
+	margin: auto;
+}
+header {
+	background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(https://i.postimg.cc/YjcJg24M/aa.jpg);
+	height: 80vh;
+	-webkit-background-size: cover;
+	background-size: cover;
+	background-position: center center;
+	position: relative;
+}
+.nav-area {
+	float: right;
+	list-style: none;
+	margin-top: 30px;
+}
+.nav-area li {
+	display: inline-block;
+}
+.nav-area li a {
+	color: #fff;
+	text-decoration: none;
+	padding: 5px 20px;
+	font-family: poppins;
+	font-size: 16px;
+	text-transform: uppercase;
+}
+.nav-area li a:hover {
+	background: #fff;
+	color: #333;
+}
+.logo {
+	float: left;
+}
+.logo img {
+	width: 100%;
+	padding: 15px 0;
+}
+.welcome-text {
+	position: absolute;
+	width: 600px;
+	height: 300px;
+	margin: 20% 30%;
+	text-align: center;
+}
+.welcome-text h1 {
+	text-align: center;
+	color: #fff;
+	
+	font-size: 60px;
+}
+.welcome-text h1 span {
+	color: #00fecb;
+}
+.welcome-text a {
+	border: 1px solid #fff;
+	padding: 10px 25px;
+	text-decoration: none;
+	font-size: 14px;
+	margin-top: 20px;
+	display: inline-block;
+	color: #fff;
+}
+.welcome-text a:hover {
+	background: #fff;
+	color: #333;
+}
+/*resposive*/
+
+@media (max-width:600px) {
+	.wrapper {
+		width: 100%;
+	}
+	.logo {
+		float: none;
+		width: 50%;
+		text-align: center;
+		margin: auto;
+	}
+	
+	.nav-area {
+		float: none;
+		margin-top: 0;
+	}
+	.nav-area li a {
+		padding: 5px;
+		font-size: 11px;
+	}
+	.nav-area {
+		text-align: center;
+	}
+	.welcome-text {
+		width: 100%;
+		height: auto;
+		margin: 30% 0;
+	}
+	.welcome-text h1 {
+		font-size: 30px;
+	}
+}
+input.searchbar {
+    padding: 10px;
+    font-size: 17px;
+    border: 1px solid grey;
+    float: left;
+    width: 80%;
+    background: #fff;
+}
+
+.second-section {
+    text-align: center;
+	height: 50vh;
+}
+
+/* The popup form - hidden by default */
+.form-popup {
+    display: none;
+  position: fixed;
+  right: 35%;
+  width: 660px;
+
+  }
+  
+  /*form CSS*/
+
+  #container{
+	box-sizing: border-box;
+  margin: 30px auto;
+  max-width: 800px;
+  padding: 20px;
+}
+
+.form-wrap{
+	box-sizing: border-box;
+  background-color: #eae2e2;
+  padding-bottom: 80px;
+  padding-right: 25px;
+  padding-left: 25px;
+  color: #333;
+  border-top: 60px solid #0c9ddd;
+  border-radius: 05px;
+}
+
+.form-wrap h1,
+.form-wrap p{
+	box-sizing: border-box;
+  text-align: center;
+}
+
+.form-wrap .form-group{
+	box-sizing: border-box;
+  margin-top: 15px;
+}
+
+.form-wrap .form-group label{
+  display: block;
+  color: #666;
+}
+
+.form-wrap .form-group .input-fields{
+	box-sizing: border-box;
+  width: 100%;
+  padding: 10px;
+  border: #ddd 1px solid;
+  border-radius: 5px;
+}
+
+ .input-fields-section50{
+	 box-sizing: border-box;
+	float:left;
+  width: 46%;
+  padding: 10px;
+  border: #ddd 1px solid;
+  border-radius: 5px;
+  margin-bottom : 15px;
+}
+
+.form-wrap button{
+	box-sizing: border-box;
+  display: block;
+  width: 30%;
+  padding: 10px;
+  margin-top: 20px;
+  cursor: pointer;
+  border: 1px solid #303b38;
+  font-family: 'poppins';
+  font-size: 15px;
+  transition: 1s;
+}
+
+.form-wrap button:hover{
+	box-sizing: border-box;
+  background-color: #37a08e;
+  transition: 1s;
+}
+
+.form-wrap .bottom-text{
+	box-sizing: border-box;
+  font-size: 13px;
+  margin-top: 20px;
+}
+
+footer {
+	box-sizing: border-box;
+  text-align: center;
+  margin-top: 10px;
+  color: #333;
+}
+
+footer a {
+	box-sizing: border-box;
+  color:#49c1a2
+}
+.button-Section{
+	box-sizing: border-box;
+	float:left;
+}
+
+
+
+.slidecontainer {
+	box-sizing: border-box;
+  width: 100%;
+}
+
+.slider {
+	box-sizing: border-box;
+  width: 90%;
+  height: 15px;
+  border-radius: 5px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider:hover {
+	box-sizing: border-box;
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+	box-sizing: border-box;
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #04AA6D;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+	box-sizing: border-box;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #04AA6D;
+  cursor: pointer;
+}
+.float-class {
+	box-sizing: border-box;
+	float: left
+}
